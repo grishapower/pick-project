@@ -846,7 +846,7 @@ export const adminRouter = createTRPCRouter({
             },
           );
 
-          if (countedProgress.completed) {
+          if (countedProgress?.completed) {
             completedCount += 1;
           }
         });
