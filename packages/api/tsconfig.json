@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": [
+    "src",
+    "index.ts",
+    "transformer.ts",
+    "../types/types/PickemStageStatusEnum.ts",
+    "../types/constants/correctAnswer.ts"
+  ]
+}

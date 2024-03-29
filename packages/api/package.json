@@ -1,0 +1,27 @@
+{
+  "name": "@pickem/api",
+  "version": "0.0.1",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pickem/shared": "*",
+    "@trpc/client": "^10.38.5",
+    "@trpc/server": "^10.38.5",
+    "axios": "^1.5.1",
+    "dayjs": "^1.11.10",
+    "lodash.groupby": "^4.6.0",
+    "superjson": "^1.13.3",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/lodash.groupby": "^4.6.9",
+    "eslint": "^8.32.0",
+    "typescript": "^4.9.5"
+  }
+}

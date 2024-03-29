@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body {
+  color: #fff;
+  /* min-height: 100%; */
+  /* height: 100%; */
+}
+
+
+
+body {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background: #000;
+}
+
+/* input,
+textarea,
+select {
+  color: #000;
+} */
+
+.container {
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.inner-container {
+  max-width: 1248px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.max-2-lines {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* custom classes */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inset-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* playoff table todo move to tailwind*/
+
+.playoff-table {
+  display: flex;
+  gap: 65px;
+  transition: 0.2s ease all;
+}
+
+.playoff-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 16px;
+}
+
+.playoff-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.playoff-column:last-child {
+  height: auto;
+}
+
+.playoff-pair {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  gap: 8px;
+}
+
+.playoff-pair:last-child {
+  margin-bottom: 0;
+}
+
+/* .connection-bracket:after { */
+.connection-bracket:after {
+  content: "";
+  height: calc(100% + 16px);
+  position: absolute;
+  top: calc(50% + -1px);
+  right: -30px;
+  width: 30px;
+  border: 1px solid #373a41;
+  border-left: none;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background: #1c1e23;
+  z-index: 1;
+}
+
+.connection-line:before {
+  content: "";
+  display: block;
+  width: 35px;
+  position: absolute;
+  top: 50%;
+  left: -35px;
+  transform: translateY(-50%);
+  height: 1px;
+  background: #373a41;
+} 
+
+
+.playoff-team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 160px;
+  height: 48px;
+
+  border-radius: 8px;
+  font-size: 16px;
+
+  transition: 0.2s ease all;
+}
+
+.playoff-team--small {
+  width: 90px;  
+}
+
+.playoff-team--no-team {
+  border: 2px #373a41 dashed;
+}
+
+.playoff-column:last-child .playoff-pair:before {
+  height: 1px;
+  border-bottom: none;
+}
+
+.playoff-table-se2 .playoff-column:not(:first-child) .playoff-pair:before {
+  content: "";
+  display: block;
+  height: 50%;
+  width: 10px;
+  position: absolute;
+  top: 50%;
+  left: -11px;
+  transform: translateY(-50%);
+  border: none;
+  width: 11px;
+  height: 1px;
+  background-color: #373a41;
+} 
+
+/* gradients */
+
+.gold-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(219, 186, 8, 0.2) 0%,
+    rgba(219, 186, 8, 0) 100%
+  );
+}
+
+.silver-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(169, 180, 190, 0.2) 0%,
+    rgba(169, 180, 190, 0) 100%
+  );
+}
+
+.copper-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(168, 74, 47, 0.2) 0%,
+    rgba(168, 74, 47, 0) 100%
+  );
+}
+
+.green-gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.09%, #325B18 100%);
+}
+
+.red-gradient {
+  background: linear-gradient(180.3deg, rgba(0, 0, 0, 0) 40.81%, #8F3920 99.74%);
+}
+
+.green-gradient-big {
+  background: linear-gradient(180deg, rgba(28, 30, 35, 0) 0%, #325B18 100%),
+  linear-gradient(0deg, #1C1E23, #1C1E23);
+}
+
+.red-gradient-big {
+  background: linear-gradient(180deg, rgba(28, 30, 35, 0) 0%, #8F3921 100%),
+  linear-gradient(0deg, #1C1E23, #1C1E23);
+}
+
+.blue-gradient {
+  background: linear-gradient(180.3deg, rgba(0, 0, 0, 0) 40.81%, #1B8DC1 99.74%);
+}
+
+.blue-gradient-main {
+  background: linear-gradient(278.83deg, #1B8DC1 16.59%, #6080FF 89.87%);
+}
+
+.dark-gradient {
+  background: linear-gradient(90deg, #1C1E23 0%, #222429 57.72%);
+}
+
+.left-green-gradient {
+  background: linear-gradient(90deg, #325B18 0%, #222429 57.72%);
+}
+
+
+
+
+.dashed-square {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23373A41FF' stroke-width='3' stroke-dasharray='6%2c 15' stroke-dashoffset='42' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+.Toastify__toast-icon {
+  width: 24px;
+}
+
+/* animation move to another file later */
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translate(-1px, -1px); }
+  20%, 40%, 60%, 80% { transform: translate(1px, 1px); }
+}
+
+.shakeAnimation:hover {
+  animation: shake 1s; /* Run for 0.82 seconds */
+  animation-timing-function: ease-in-out; /* Start and end slowly, but move faster through the middle */
+}
+
+@keyframes bobbing {
+  0%, 100% { transform: translateY(2px); }
+  50% { transform: translateY(-2px); }
+}
+
+.bobbingAnimation {
+  animation: bobbing 1s ease-in-out infinite;
+}

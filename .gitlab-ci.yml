@@ -1,0 +1,12 @@
+stages:
+  - deploy
+
+deploy-job: 
+  stage: deploy
+  script:
+    - cd /var/www/mypickem_io_usr/data/www/mypickem.io/www
+    - git reset --hard
+    - git pull origin main
+    - pnpm i
+    - pnpm build
+    - pm2 start
