@@ -1,4 +1,3 @@
-# Spiritverse
 
 ## Getting Started
 
